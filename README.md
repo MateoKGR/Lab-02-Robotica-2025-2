@@ -19,4 +19,13 @@ Indice:
 9. [Código desarrollado](#codigo)
 10. [Videos simulación e implementación](#videos)
 
-## cuadro-comparativo
+## Cuadro comparativo
+## Descripción de las configuraciones home1 y home2
+## Procedimiento detallado
+## Explicación completa
+## Descripción funcionalidades RoboDK
+## Análisis comparativo RoboDK y RobotStudio
+## Diagrama de flujo
+## Plano de planta
+## Código desarrollado
+## Videos simulación e implementación
