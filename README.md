@@ -19,3 +19,4 @@ Indice:
 9. [Código desarrollado](#codigo)
 10. [Videos simulación e implementación](#videos)
 
+## cuadro-comparativo
