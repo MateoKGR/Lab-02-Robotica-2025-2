@@ -22,9 +22,9 @@ Indice:
 ## Cuadro comparativo
 ## Descripción de las configuraciones home1 y home2
 
-![Home1](RHome1.jpg)
+![Home1](images/RHome1.png)
 
-![Home2](RHome2.jpg)
+![Home2](images/RHome2.png)
 ## Procedimiento detallado
 Antes de realizar cualquier movimiento, es importante tener en cuenta los siguientes pasos de seguridad y configuración:
 Primero, se debe **desactivar el botón de seguridad o parada de emergencia**. Luego, es necesario **activar los servomotores** presionando el botón **“SERVO ON READY”**.  
@@ -63,7 +63,7 @@ En ambos casos, RoboDK actúa como un intermediario entre el entorno virtual de 
 ## Análisis comparativo RoboDK y RobotStudio
 ## Diagrama de flujo
 Se adjunta el diagrama de flujo del el codigo final
-![Diagrama de flujo](DF.png)
+![Diagrama de flujo](images/DF.png)
 ## Plano de planta
 
 ## Código desarrollado
