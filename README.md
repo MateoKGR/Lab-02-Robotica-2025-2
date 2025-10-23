@@ -22,7 +22,15 @@ Indice:
 ## Cuadro comparativo
 ## Descripción de las configuraciones home1 y home2
 ## Procedimiento detallado
-Es muy sencillo realizar movimientos manuales, pues el teach pendant nos permite hacer esto de manera muy facil
+Antes de realizar cualquier movimiento, es importante tener en cuenta los siguientes pasos de seguridad y configuración:
+Primero, se debe **desactivar el botón de seguridad o parada de emergencia**. Luego, es necesario **activar los servomotores** presionando el botón **“SERVO ON READY”**.  
+Además, el **teach pendant** debe estar en modo **“TEACH”**, el cual permite realizar trayectorias manuales.
+Posteriormente, se debe presionar el botón **“COORD”**, que permite alternar entre el modo de movimiento **articular** o **lineal**.  
+Si se selecciona el modo **articular**, en la parte superior de la pantalla aparecerá un símbolo de un robot.  
+En cambio, si se selecciona el modo **lineal**, se mostrará un sistema de coordenadas.
+
+Una vez definido el modo de movimiento, se pueden realizar desplazamientos utilizando los botones correspondientes a los ejes **X**, **Y** y **Z**.  
+Es importante tener en cuenta que las **articulaciones 7 y 8** son independientes de estas formas de movimiento del robot.
 ## Explicación completa
 ## Descripción funcionalidades RoboDK
 RoboDK es una plataforma de simulación y programación *offline* de robots industriales que permite desarrollar, probar y optimizar trayectorias sin necesidad de utilizar el robot físico.  
@@ -34,6 +42,19 @@ RoboDK es una plataforma de simulación y programación *offline* de robots indu
 - **Integración CAD/CAM:** facilita importar modelos CAD para realizar trayectorias de mecanizado, soldadura o pulido.  
 - **Control y comunicación:** soporta conexión en tiempo real con el robot físico mediante protocolos estándar.  
 - **Personalización mediante scripts:** admite el uso de Python para automatizar rutinas y definir trayectorias paramétricas.  
+
+RoboDK puede comunicarse con el manipulador de dos maneras:
+
+1. **Programación offline:**  
+   En este modo, RoboDK genera el código del programa compatible con el lenguaje del fabricante del robot (por ejemplo: KUKA, ABB, Fanuc, UR, Mitsubishi, entre otros).  
+   Este archivo se transfiere manualmente al controlador del robot, donde se ejecuta sin necesidad de mantener una conexión activa con el software.
+
+2. **Control online (en tiempo real):**  
+   RoboDK puede establecer una conexión directa con el robot físico mediante una red Ethernet o protocolo TCP/IP.  
+   A través de esta comunicación, el software envía las instrucciones al controlador para mover el robot en tiempo real.  
+   Para ello, utiliza **drivers específicos** para cada marca de robot, permitiendo enviar comandos, actualizar posiciones y ejecutar programas desde la interfaz de RoboDK o mediante scripts en Python.
+
+En ambos casos, RoboDK actúa como un intermediario entre el entorno virtual de simulación y el controlador físico del robot, garantizando que los movimientos sean precisos, seguros y reproducibles.
 
 ## Análisis comparativo RoboDK y RobotStudio
 ## Diagrama de flujo
