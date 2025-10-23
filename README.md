@@ -22,14 +22,23 @@ Indice:
 ## Cuadro comparativo
 ## Descripción de las configuraciones home1 y home2
 ## Procedimiento detallado
-Para
+Es muy sencillo realizar movimientos manuales, pues el teach pendant nos permite hacer esto de manera muy facil
 ## Explicación completa
 ## Descripción funcionalidades RoboDK
+RoboDK es una plataforma de simulación y programación *offline* de robots industriales que permite desarrollar, probar y optimizar trayectorias sin necesidad de utilizar el robot físico.  
+
+### Funcionalidades principales
+
+- **Simulación de trayectorias:** permite crear y visualizar movimientos del robot en un entorno 3D, evaluando posibles colisiones y alcances.  
+- **Programación offline:** se pueden generar programas compatibles con múltiples marcas de robots (como KUKA, ABB, Fanuc o UR) directamente desde la interfaz.  
+- **Integración CAD/CAM:** facilita importar modelos CAD para realizar trayectorias de mecanizado, soldadura o pulido.  
+- **Control y comunicación:** soporta conexión en tiempo real con el robot físico mediante protocolos estándar.  
+- **Personalización mediante scripts:** admite el uso de Python para automatizar rutinas y definir trayectorias paramétricas.  
+
 ## Análisis comparativo RoboDK y RobotStudio
 ## Diagrama de flujo
-
+Se adjunta el diagrama de flujo del el codigo final
 ![Diagrama de flujo](DF.png)
-
 ## Plano de planta
 
 ## Código desarrollado
