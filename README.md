@@ -22,13 +22,19 @@ Indice:
 ## Cuadro comparativo
 ## Descripción de las configuraciones home1 y home2
 ## Procedimiento detallado
-La idea de empezar a lograr la parte de los robots es poder intentar
+Para
 ## Explicación completa
 ## Descripción funcionalidades RoboDK
 ## Análisis comparativo RoboDK y RobotStudio
 ## Diagrama de flujo
+
+![Diagrama de flujo](DF.png)
+
 ## Plano de planta
+
 ## Código desarrollado
+
+Este programa en Python utiliza la API de RoboDK para controlar un robot industrial. Establece la conexión con el robot, configura su marco de trabajo y genera movimientos que dibujan una figura tipo cardioide y las letras JEISON y MATEO. Combina cálculos matemáticos con comandos de movimiento para ejecutar trayectorias precisas dentro del entorno de simulación.
 
 ```python
 
