@@ -22,6 +22,7 @@ Indice:
 ## Cuadro comparativo
 ## Descripción de las configuraciones home1 y home2
 ## Procedimiento detallado
+La idea de empezar a lograr la parte de los robots es poder intentar
 ## Explicación completa
 ## Descripción funcionalidades RoboDK
 ## Análisis comparativo RoboDK y RobotStudio
