@@ -99,7 +99,9 @@ En términos generales, RoboDK ofrece más flexibilidad y compatibilidad, RobotS
 Se adjunta el diagrama de flujo del el codigo final
 ![Diagrama de flujo](images/df1.png)
 ## Plano de planta
-
+Vista posterior
+![Plano planta vista superior](images/planoplantaposterior.jpg)
+![Plano planta vista lateral](images/planoplantalateral.jpg)
 ## Código desarrollado
 
 Este programa en Python utiliza la API de RoboDK para controlar un robot industrial. Establece la conexión con el robot, configura su marco de trabajo y genera movimientos que dibujan una figura tipo cardioide y las letras JEISON y MATEO. Combina cálculos matemáticos con comandos de movimiento para ejecutar trayectorias precisas dentro del entorno de simulación.
