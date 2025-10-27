@@ -294,5 +294,11 @@ print(f"¡Figura (rosa polar) completada en el frame '{frame_name}'!")
 
 ## Videos simulación e implementación
 
-<video controls src="videos/videoroboticalab2.mp4" title="Implementación"></video>
+A continuacionel video de la implementación
+
+[![Ver video en Drive](images/planoplantalateral.jpg)](https://drive.google.com/file/d/1x4Dj8i6_Q_FJjKGNCeUBCR8ndX4_hj_t/view?usp=sharing)
+
+El video de la simulación
+
+[![Ver video en Drive](images/simu.png](https://drive.google.com/file/d/1POhu2AAUY6zxp2ZXC3oe8bFfMkyeBGjd/view?usp=sharing)
 
