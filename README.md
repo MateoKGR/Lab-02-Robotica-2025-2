@@ -63,6 +63,15 @@ En cambio, si se selecciona el modo **lineal**, se mostrará un sistema de coord
 Una vez definido el modo de movimiento, se pueden realizar desplazamientos utilizando los botones correspondientes a los ejes **X**, **Y** y **Z**.  
 Es importante tener en cuenta que las **articulaciones 7 y 8** son independientes de estas formas de movimiento del robot.
 ## Explicación completa
+El manipulador Motoman MH6 cuenta con tres niveles de velocidad para los movimientos manuales: Slow, Fast y High Speed. Estos niveles determinan la rapidez con la que se desplazan las articulaciones o el efector final cuando se controla el robot desde el teach pendant.
+
+El operador puede cambiar entre los tres modos directamente desde el panel de control, usando el botón correspondiente al nivel deseado. Cada vez que se selecciona un modo, el cambio se aplica de inmediato y se refleja en la pantalla del controlador, donde aparece indicado el nivel de velocidad activo.
+
+En general, el modo Slow se utiliza para realizar movimientos precisos o cercanos a zonas de trabajo sensibles; Fast es útil para desplazamientos intermedios o ajustes rápidos; y High Speed se reserva para movimientos amplios o pruebas en zonas despejadas.
+
+Este sistema de tres velocidades facilita el control del robot de forma segura y práctica, permitiendo al operador ajustar la rapidez según la tarea sin necesidad de configuraciones adicionales.
+
+![Teach pendant](images/velocidades.jpg)
 ## Descripción funcionalidades RoboDK
 RoboDK es una plataforma de simulación y programación *offline* de robots industriales que permite desarrollar, probar y optimizar trayectorias sin necesidad de utilizar el robot físico.  
 
