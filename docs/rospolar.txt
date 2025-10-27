@@ -1,0 +1,220 @@
+from robodk.robolink import *    # API para comunicarte con RoboDK
+from robodk.robomath import *    # Funciones matemáticas
+import math
+
+#------------------------------------------------
+# 1) Conexión a RoboDK e inicialización
+#------------------------------------------------
+RDK = Robolink()
+
+# Elegir un robot (si hay varios, aparece un popup)
+robot = RDK.ItemUserPick("Selecciona un robot", ITEM_TYPE_ROBOT)
+#if not robot.Valid():
+#    raise Exception("No se ha seleccionado un robot válido.")
+
+# Conectar al robot físico
+#if not robot.Connect():
+#    raise Exception("No se pudo conectar al robot. Verifica que esté en modo remoto y que la configuración sea correcta.")
+
+# Confirmar conexión
+#if not robot.ConnectedState():
+#    raise Exception("El robot no está conectado correctamente. Revisa la conexión.")
+
+print("Robot conectado correctamente.")
+
+#------------------------------------------------
+# 2) Cargar el Frame (ya existente) donde quieres dibujar
+#    Ajusta el nombre si tu Frame se llama diferente
+#------------------------------------------------
+frame_name = "Frame_from_Target1"
+frame = RDK.Item(frame_name, ITEM_TYPE_FRAME)
+home=RDK.Item('Target_Home', ITEM_TYPE_TARGET)
+m1=frame.Pose()
+if not frame.Valid():
+    raise Exception(f'No se encontró el Frame "{frame_name}" en la estación.')
+
+# Asignamos este frame al robot
+robot.setPoseFrame(frame)
+# Usamos la herramienta activa
+robot.setPoseTool(robot.PoseTool())
+
+# Ajustes de velocidad y blending
+robot.setSpeed(300)   # mm/s - Ajusta según necesites
+robot.setRounding(5)  # blending (radio de curvatura)
+
+#------------------------------------------------
+# 3) Parámetros de la figura (rosa polar)
+#------------------------------------------------
+#num_points = 720       # Cuántos puntos muestreamos (mayor = más suave)
+#A = 150               # Amplitud (300 mm = radio máximo)
+#k = 5                  # Parámetro de la rosa (pétalos). Si es impar, habrá k pétalos; si es par, 2k
+#z_surface = 0          # Z=0 en el plano del frame
+#z_safe = 50            # Altura segura para aproximarse y salir
+
+
+num_points = 200       # Cuántos puntos para suavidad
+a = 100                # Tamaño de la cardioide (radio máximo)
+offset_x = 300         # Desplazamiento en X dentro del frame
+offset_y = 0           # Puedes moverla en Y también
+z_surface = 0
+z_safe = 50
+
+offsetN=50
+
+
+robot.MoveJ(home)
+#------------------------------------------------
+# 4) Movimiento al centro en altura segura
+#------------------------------------------------
+# El centro de la rosa (r=0) corresponde a x=0, y=0
+robot.MoveJ(transl(0, 0, z_surface + z_safe))
+
+# Bajamos a la "superficie" (Z=0)
+robot.MoveL(transl(0, 0, 30))
+
+#------------------------------------------------
+# 5) Dibujar la rosa polar
+#    r = A * sin(k*theta)
+#    x = r*cos(theta), y = r*sin(theta)
+#------------------------------------------------
+# Recorremos theta de 0 a 2*pi (una vuelta completa)
+full_turn = 2 * math.pi
+
+for i in range(num_points + 1):
+    # Fracción entre 0 y 1
+    t = i / num_points
+    theta = full_turn * t
+
+    # Ecuación polar de la cardioide
+    r = a * (1 + math.cos(theta))
+
+    # Convertir a coordenadas cartesianas
+    x = r * math.cos(theta)
+    y = r * math.sin(theta)
+
+    # Movimiento lineal en el plano del Frame
+    robot.MoveL(transl(x + offset_x, y + offset_y, z_surface))
+
+#------------------------------------------------
+# 6) Subida al finalizar
+#------------------------------------------------
+robot.MoveL(transl(x + offset_x, y + offset_y, z_surface + z_safe))
+
+
+point1=transl(-20+offsetN,-180,0)
+
+point2=transl(0+offsetN,-200,0)
+
+
+# Figura J
+robot.MoveL(transl(50+offsetN, -200, 0))
+
+robot.MoveL(transl(50+offsetN, -160, 0))
+
+robot.MoveL(transl(0+offsetN, -160, 0))
+
+robot.MoveL(transl(-15+offsetN, -160, 0))
+
+robot.MoveL(transl(-15+offsetN, -190, 0))
+
+robot.MoveL(transl(0+offsetN, -190, 0))
+
+robot.MoveL(transl(0+offsetN, -190, 50))
+
+# Figura E
+robot.MoveL(transl(0+offsetN, -200, 50))
+robot.MoveL(transl(50+offsetN, -100, 0))
+robot.MoveL(transl(50+offsetN, -140, 0))
+robot.MoveL(transl(20+offsetN, -140, 0))
+robot.MoveL(transl(20+offsetN, -100, 0))
+robot.MoveL(transl(20+offsetN, -140, 0))
+robot.MoveL(transl(-20+offsetN, -140, 0))
+robot.MoveL(transl(-20+offsetN, -100, 0))
+robot.MoveL(transl(-20+offsetN, -100, 50))
+
+# Figura I
+robot.MoveL(transl(50+offsetN, -80, 0))
+robot.MoveL(transl(-20+offsetN, -80, 0))
+robot.MoveL(transl(-20+offsetN, -80, 50))
+
+# Figura S
+robot.MoveL(transl(50+offsetN, -20, 0))
+robot.MoveL(transl(50+offsetN, -60, 0))
+robot.MoveL(transl(20+offsetN, -60, 0))
+robot.MoveL(transl(20+offsetN, -20, 0))
+robot.MoveL(transl(-20+offsetN, -20, 0))
+robot.MoveL(transl(-20+offsetN, -60, 0))
+robot.MoveL(transl(-20+offsetN, -60, 50))
+
+# Figura O
+robot.MoveL(transl(50+offsetN, 0, 0))
+robot.MoveL(transl(50+offsetN, 40, 0))
+robot.MoveL(transl(-20+offsetN, 40, 0))
+robot.MoveL(transl(-20+offsetN, 0, 0))
+robot.MoveL(transl(50+offsetN, 0, 0))
+robot.MoveL(transl(50+offsetN, 0, 50))
+
+# Figura N
+robot.MoveL(transl(-20+offsetN, 60, 0))
+robot.MoveL(transl(50+offsetN, 60, 0))
+robot.MoveL(transl(-20+offsetN, 100, 0))
+robot.MoveL(transl(50+offsetN, 100, 0))
+robot.MoveL(transl(50+offsetN, 100, 50))
+
+# ======================
+# MATEO
+# ======================
+
+# Figura M
+robot.MoveL(transl(-110+offsetN, -200, 0))
+robot.MoveL(transl(-40+offsetN, -200, 0))
+robot.MoveL(transl(-70+offsetN, -160, 0))
+robot.MoveL(transl(-40+offsetN, -120, 0))
+robot.MoveL(transl(-110+offsetN, -120, 0))
+robot.MoveL(transl(-110+offsetN, -120, 50))
+
+# Figura A
+robot.MoveL(transl(-110+offsetN, -100, 0))
+robot.MoveL(transl(-40+offsetN, -60, 0))
+
+robot.MoveL(transl(-110+offsetN, -20, 0))
+
+robot.MoveL(transl(-110+offsetN, -20, 20))
+
+robot.MoveL(transl(-70+offsetN, -80, 0))
+robot.MoveL(transl(-70+offsetN, -40, 0))
+robot.MoveL(transl(-70+offsetN, -40, 50))
+
+#Figura T
+
+robot.MoveL(transl(-110+offsetN, 20, 0))
+
+robot.MoveL(transl(-40+offsetN, 20, 0))
+
+robot.MoveL(transl(-40+offsetN, 0, 0))
+
+robot.MoveL(transl(-40+offsetN, 40, 0))
+
+robot.MoveL(transl(-40+offsetN, 40, 50))
+
+
+robot.MoveL(transl(-110+offsetN, 20+60, 0))
+
+robot.MoveL(transl(-40+offsetN, 20+60, 0))
+
+robot.MoveL(transl(-40+offsetN, 0+60, 0))
+
+robot.MoveL(transl(-40+offsetN, 40+60, 0))
+
+robot.MoveL(transl(-40+offsetN, 40+60, 50))
+
+
+robot.MoveJ(transl(0, 0, z_surface + z_safe))
+
+robot.MoveJ(home)
+
+
+
+
+print(f"¡Figura (rosa polar) completada en el frame '{frame_name}'!")
+
