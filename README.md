@@ -20,6 +20,27 @@ Indice:
 10. [Videos simulación e implementación](#videos)
 
 ## Cuadro comparativo
+
+| Característica | **Motoman MH6 (Yaskawa)** | **ABB IRB140** |
+|----------------|----------------------------|----------------|
+| **Fabricante** | Yaskawa Motoman | ABB Robotics |
+| **Grados de libertad (DOF)** | 6 | 6 |
+| **Capacidad de carga máxima (Payload)** | 6 kg | 6 kg |
+| **Alcance máximo** | 1,371 mm | 810 mm |
+| **Repetibilidad (Precisión de posicionamiento)** | ±0.08 mm | ±0.03 mm |
+| **Peso del manipulador** | 130 kg | 98 kg |
+| **Rango de movimiento (articulaciones)** | S: ±170°, L: +155°/-90°, U: +250°/-175°, R: ±200°, B: ±150°, T: ±360° | J1: ±160°, J2: +110°/-110°, J3: +230°/-60°, J4: ±200°, J5: ±115°, J6: ±400° |
+| **Velocidad máxima conjunta (aprox.)** | Hasta 230°/s (dependiendo del eje) | Hasta 320°/s (dependiendo del eje) |
+| **Montaje** | Piso, pared, techo o invertido | Piso, pared, techo o invertido |
+| **Controlador** | DX100 / DX200 | IRC5 Compact |
+| **Aplicaciones típicas** | Manipulación de materiales, soldadura por arco, paletizado, ensamblaje, corte | Ensamblaje, manipulación de materiales, atornillado, laboratorio, empaquetado |
+| **Tipo de energía** | Eléctrico (servomotores AC) | Eléctrico (servomotores AC) |
+| **Comunicación con software** | Compatible con RoboDK, MotoSim, MotoCom | Compatible con RobotStudio |
+| **Ambiente operativo** | 0–45°C, IP54 (IP67 opcional en muñeca) | 0–45°C, IP54 (IP67 en muñeca opcional) |
+| **Ventajas destacadas** | Mayor alcance, buena relación peso/rango, versátil en montaje | Alta precisión, tamaño compacto, excelente para tareas de laboratorio |
+| **Limitaciones** | Menor precisión que el IRB140 | Menor alcance y carga útil limitada a 6 kg |
+| **Año de introducción** | ~2005 | ~2004 |
+
 ## Descripción de las configuraciones home1 y home2
 
 ![Home1](images/rhome1.png)
