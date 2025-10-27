@@ -82,6 +82,13 @@ RoboDK puede comunicarse con el manipulador de dos maneras:
 En ambos casos, RoboDK actúa como un intermediario entre el entorno virtual de simulación y el controlador físico del robot, garantizando que los movimientos sean precisos, seguros y reproducibles.
 
 ## Análisis comparativo RoboDK y RobotStudio
+
+RoboDK se caracteriza por ser un software multimarca, compatible con una gran cantidad de robots industriales como Yaskawa,ABB, FANUC, Universal Robots, entre otros. Esto hace que sea muy versátil, especialmente en entornos académicos o de investigación donde se utilizan equipos de distintos fabricantes. Además, permite generar y editar programas en varios lenguajes (como Python, RAPID o Motoman INFORM) y cuenta con una interfaz bastante intuitiva y ligera. Su conexión con el robot físico se realiza a través de drivers o protocolos TCP/IP específicos de cada marca, como el DX100 o DX200 en el caso del Motoman MH6.
+
+Por otro lado, RobotStudio es una herramienta desarrollada por ABB exclusivamente para sus propios robots. Está enfocada en la simulación, programación y prueba de rutinas en lenguaje RAPID. Su entorno es más técnico, es más ideal para entornos industriales donde se necesita validar trayectorias, detectar colisiones y optimizar ciclos antes de llevarlos a la planta.
+
+En términos generales, RoboDK ofrece más flexibilidad y compatibilidad, RobotStudio proporciona mas realismo y precisió pero solo para robots ABB. Para trabajos educativos y proyectos con diferentes marcas, RoboDK resulta más práctico; en cambio, para validaciones industriales específicas con robots ABB, RobotStudio es mejor.
+
 ## Diagrama de flujo
 Se adjunta el diagrama de flujo del el codigo final
 ![Diagrama de flujo](images/df1.png)
