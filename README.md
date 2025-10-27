@@ -300,5 +300,5 @@ A continuacionel video de la implementación
 
 El video de la simulación
 
-[![Ver video en Drive](images/simu.png](https://drive.google.com/file/d/1POhu2AAUY6zxp2ZXC3oe8bFfMkyeBGjd/view?usp=sharing)
+[!Ver video en Drive](images/simu.png)(https://drive.google.com/file/d/1POhu2AAUY6zxp2ZXC3oe8bFfMkyeBGjd/view?usp=sharing)
 
