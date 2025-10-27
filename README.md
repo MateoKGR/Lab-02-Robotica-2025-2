@@ -63,7 +63,7 @@ En ambos casos, RoboDK actúa como un intermediario entre el entorno virtual de 
 ## Análisis comparativo RoboDK y RobotStudio
 ## Diagrama de flujo
 Se adjunta el diagrama de flujo del el codigo final
-![Diagrama de flujo](images/df.png)
+![Diagrama de flujo](images/df1.png)
 ## Plano de planta
 
 ## Código desarrollado
