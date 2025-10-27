@@ -100,7 +100,11 @@ Se adjunta el diagrama de flujo del el codigo final
 ![Diagrama de flujo](images/df1.png)
 ## Plano de planta
 Vista posterior
+
 ![Plano planta vista superior](images/planoplantaposterior.jpg)
+
+Vista lateral
+
 ![Plano planta vista lateral](images/planoplantalateral.jpg)
 ## Código desarrollado
 
