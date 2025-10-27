@@ -22,9 +22,9 @@ Indice:
 ## Cuadro comparativo
 ## Descripción de las configuraciones home1 y home2
 
-![Home1](images/RHome1.png)
+![Home1](images/rhome1.png)
 
-![Home2](images/RHome2.png)
+![Home2](images/rhome2.png)
 ## Procedimiento detallado
 Antes de realizar cualquier movimiento, es importante tener en cuenta los siguientes pasos de seguridad y configuración:
 Primero, se debe **desactivar el botón de seguridad o parada de emergencia**. Luego, es necesario **activar los servomotores** presionando el botón **“SERVO ON READY”**.  
