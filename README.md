@@ -43,6 +43,12 @@ Indice:
 
 ## Descripción de las configuraciones home1 y home2
 
+El manipulador Motoman MH6 cuenta con dos configuraciones iniciales principales: Home1 y Home2.
+En la configuración Home1, los ejes del robot están extendidos en una posición más abierta, lo que facilita el inicio de operaciones y la ejecución de trayectorias, ya que el robot tiene un rango de movimiento amplio y puede acceder fácilmente a su zona de trabajo.
+Por otro lado, la configuración Home2 corresponde a una posición más compacta o “recogida”, donde el robot mantiene sus articulaciones cercanas al cuerpo. Esta posición es más segura para el almacenamiento o reposo, ya que reduce el espacio ocupado y minimiza el riesgo de colisiones.
+
+En conclusión, la posición Home1 es más adecuada para iniciar tareas o calibraciones, mientras que Home2 se recomienda para finalizar el trabajo o dejar el robot en reposo.
+
 ![Home1](images/rhome1.png)
 
 ![Home2](images/rhome2.png)
