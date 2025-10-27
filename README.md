@@ -294,11 +294,11 @@ print(f"¡Figura (rosa polar) completada en el frame '{frame_name}'!")
 
 ## Videos simulación e implementación
 
-A continuación el video de la implementación
+A continuación el video de la implementación (dar click en la imagen para ser dirigido al video)
 
 [![Ver video en Drive](images/planoplantalateral.jpg)](https://drive.google.com/file/d/1x4Dj8i6_Q_FJjKGNCeUBCR8ndX4_hj_t/view?usp=sharing)
 
-El video de la simulación
+El video de la simulación (dar click en la imagen para ser dirigido al video)
 
 [![Ver video en Drive](images/simu.png)](https://drive.google.com/file/d/1POhu2AAUY6zxp2ZXC3oe8bFfMkyeBGjd/view?usp=sharing)
 
