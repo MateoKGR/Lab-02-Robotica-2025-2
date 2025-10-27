@@ -293,3 +293,6 @@ print(f"¡Figura (rosa polar) completada en el frame '{frame_name}'!")
 ```
 
 ## Videos simulación e implementación
+
+<video controls src="videos/videoroboticalab2.mp4" title="Implementación"></video>
+
